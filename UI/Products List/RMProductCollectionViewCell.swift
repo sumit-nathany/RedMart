@@ -17,7 +17,7 @@ internal final class RMProductCollectionViewCell: UICollectionViewCell
 	override func awakeFromNib()
 	{
 		super.awakeFromNib()
-		self.layer.cornerRadius = 2.0
+		self.layer.cornerRadius = 4.0
 		self.titleLabel.numberOfLines = 3
 		self.layer.backgroundColor = UIColor.white.cgColor
 	}

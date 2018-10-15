@@ -12,12 +12,8 @@ internal final class RMProductDescriptionCell: UITableViewCell, RMUITableViewCel
 {
     @IBOutlet weak var aboutLabel: UILabel?
 
-//    var item: RMViewModelItem? {
-//        didSet {
-//            guard  let item = item as? RMViewModelAboutItem else {
-//                return
-//            }
-//            aboutLabel?.text = item.about
-//        }
-//    }
+	internal final func setValuesBasedOn(product: RMProduct)
+	{
+		self.aboutLabel!.text = product.description
+	}
 }

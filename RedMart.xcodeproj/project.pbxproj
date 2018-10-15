@@ -31,7 +31,6 @@
 		C9A1577B2173DDF10043C492 /* RMProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A157462173DDF10043C492 /* RMProductCollectionViewCell.xib */; };
 		C9A1577C2173DDF10043C492 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A157472173DDF10043C492 /* Main.storyboard */; };
 		C9A1577D2173DDF10043C492 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9A157482173DDF10043C492 /* Assets.xcassets */; };
-		C9A1577E2173DDF10043C492 /* RMProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A1574A2173DDF10043C492 /* RMProductDetailViewModel.swift */; };
 		C9A157812173DDF10043C492 /* RMProduct.Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A1574E2173DDF10043C492 /* RMProduct.Details.swift */; };
 		C9A157832173DDF10043C492 /* RMProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A157502173DDF10043C492 /* RMProductList.swift */; };
 		C9A1578B2173DDF10043C492 /* RMProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A157582173DDF10043C492 /* RMProduct.swift */; };
@@ -67,7 +66,6 @@
 		C9A157462173DDF10043C492 /* RMProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		C9A157472173DDF10043C492 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C9A157482173DDF10043C492 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C9A1574A2173DDF10043C492 /* RMProductDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMProductDetailViewModel.swift; sourceTree = "<group>"; };
 		C9A1574E2173DDF10043C492 /* RMProduct.Details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMProduct.Details.swift; sourceTree = "<group>"; };
 		C9A157502173DDF10043C492 /* RMProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMProductList.swift; sourceTree = "<group>"; };
 		C9A157582173DDF10043C492 /* RMProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMProduct.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		C9A157492173DDF10043C492 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C9A1574A2173DDF10043C492 /* RMProductDetailViewModel.swift */,
 				C9A1574B2173DDF10043C492 /* RMProduct */,
 			);
 			path = Data;
@@ -286,7 +283,6 @@
 				C9A157752173DDF10043C492 /* RMProductPricingDetailsCell.swift in Sources */,
 				C9A1578F2173DDF10043C492 /* RMProduct.Pricing.swift in Sources */,
 				C9A1578B2173DDF10043C492 /* RMProduct.swift in Sources */,
-				C9A1577E2173DDF10043C492 /* RMProductDetailViewModel.swift in Sources */,
 				C9A157702173DDF10043C492 /* RMProductDescriptionCell.swift in Sources */,
 				C9A157782173DDF10043C492 /* RMPrductDetailsImageHeaderView.swift in Sources */,
 				C9A1577A2173DDF10043C492 /* ProductsViewController.swift in Sources */,

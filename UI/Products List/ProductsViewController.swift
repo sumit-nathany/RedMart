@@ -53,6 +53,7 @@ internal final class ProductsViewController: UIViewController, UICollectionViewD
 		DispatchQueue.main.async {
 			// Undo showing of launchscreen type view
 			self.navigationController?.isNavigationBarHidden = false
+			self.navigationController?.navigationBar.barTintColor = UIColor(named: "LogoColor")!
 			self.view.layer.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1).cgColor
 			self.logoImage.isHidden = true
 			self.collectionView.isHidden = false
@@ -88,11 +89,8 @@ internal final class ProductsViewController: UIViewController, UICollectionViewD
 
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
 	{
-		self.view.isUserInteractionEnabled = false
 		let producDetailsVC = ProductDetailsViewController(product: self.productList!.products[indexPath.row])
-
 		self.navigationController!.pushViewController(producDetailsVC, animated: true)
-		self.view.isUserInteractionEnabled = true
 	}
 
 	private final func getCellSize() -> CGSize

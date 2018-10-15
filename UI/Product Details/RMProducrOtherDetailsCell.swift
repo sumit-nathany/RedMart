@@ -2,31 +2,20 @@
 //  RMProducrOtherDetailsCell.swift
 //  RedMart
 //
-//  Created by Sumit Nathany on 10/08/18.
+//  Created by Sumit Nathany on 16/08/18.
 //  Copyright © 2018 Sumit Nathany. All rights reserved.
 //
 
 import UIKit
 
-internal final class RMProducrOtherDetailsCell: UITableViewCell
+internal final class RMProducrOtherDetailsCell: UITableViewCell, RMUITableViewCellProtocol
 {
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var valueLabel: UILabel?
-    
-//    var item: Attribute?  {
-//        didSet {
-//            titleLabel?.text = item?.key
-//            valueLabel?.text = item?.value
-//        }
-//    }
 
-    static var nib: UINib
+	internal final func setValuesBasedOn(product: RMProduct)
 	{
-        return UINib(nibName: self.identifier, bundle: nil)
-    }
-
-    static var identifier: String
-	{
-        return String(describing: self)
-    }
+		self.titleLabel!.text = "Country of Origin"
+		self.valueLabel!.text = product.details!.countryOfOrigin!
+	}
 }

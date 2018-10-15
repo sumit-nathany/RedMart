@@ -8,28 +8,14 @@
 
 import UIKit
 
-internal final class RMProductTitleCell: UITableViewCell
+internal final class RMProductTitleCell: UITableViewCell, RMUITableViewCellProtocol
 {
     @IBOutlet weak var titleLabel: UILabel?
 	@IBOutlet weak var weightageLabel: UILabel?
 
-//    var item: RMViewModelItem? {
-//        didSet {
-//            guard let item = item as? RMViewModelNamePictureItem else {
-//                return
-//            }
-//			titleLabel?.text = item.title
-//			weightageLabel?.text = item.weightage
-//        }
-//    }
-
-    static var nib: UINib
+	internal final func setValuesBasedOn(product: RMProduct)
 	{
-        return UINib(nibName: identifier, bundle: nil)
-    }
-    
-    static var identifier: String
-	{
-        return String(describing: self)
-    }
+		self.titleLabel!.text = product.title
+		self.weightageLabel!.text = product.measure.wt_or_vol
+	}
 }

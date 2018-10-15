@@ -8,45 +8,33 @@
 
 import UIKit
 
-class RMProductPricingDetailsCell: UITableViewCell {
-
+internal final class RMProductPricingDetailsCell: UITableViewCell, RMUITableViewCellProtocol
+{
 	@IBOutlet weak var priceLabel: UILabel?
 	@IBOutlet weak var discountedPriceTextDescriptionLabel: UILabel?
 
-//    var item: RMViewModelItem? {
-//        didSet {
-//            guard let item = item as? RMViewModelCostItem else {
-//                return
-//            }
-//
-//			if item.promoPrice != nil && item.promoPrice! > 0 {
-//				priceLabel?.attributedText = self.formattedDiscountedPriceWithOrignalPriceSubtitleString(("$" + String(item.price)), discountedPrice: ("$" + String(item.promoPrice!)))
-//				if let percentageText = item.discountText {
-//					self.discountedPriceTextDescriptionLabel?.isHidden = false
-//					self.discountedPriceTextDescriptionLabel?.text = "  " + percentageText + "  "
-//				}
-//			}else {
-//				self.discountedPriceTextDescriptionLabel?.isHidden = true
-//				priceLabel?.text = "$" + "\(String(item.price))"
-//			}
-//        }
-//    }
+	internal final func setValuesBasedOn(product: RMProduct)
+	{
+		if product.pricing.promoPrice != nil && product.pricing.promoPrice! > 0 {
+			self.priceLabel!.attributedText = self.formattedDiscountedPriceWithOrignalPriceSubtitleString("$\(product.pricing.price)", discountedPrice: "$\(product.pricing.promoPrice!)")
+			if let percentageText = product.pricing.savingsText {
+				self.discountedPriceTextDescriptionLabel!.isHidden = false
+				self.discountedPriceTextDescriptionLabel!.text = "  " + percentageText + "  "
+			}
+		} else {
+			self.discountedPriceTextDescriptionLabel?.isHidden = true
+			self.priceLabel!.text = "$\(product.pricing.price))"
+		}
+	}
 
-    static var nib:UINib {
-        return UINib(nibName: identifier, bundle: nil)
-    }
-    
-    static var identifier: String {
-        return String(describing: self)
-    }
-
-	override func awakeFromNib() {
+	override func awakeFromNib()
+	{
 		super.awakeFromNib()
 		self.discountedPriceTextDescriptionLabel?.layer.cornerRadius = 3.0
 	}
 
-
-	fileprivate final func formattedDiscountedPriceWithOrignalPriceSubtitleString(_ orignalPrice:String, discountedPrice:String) -> NSAttributedString {
+	private final func formattedDiscountedPriceWithOrignalPriceSubtitleString(_ orignalPrice:String, discountedPrice:String) -> NSAttributedString
+	{
 		let attrString = NSMutableAttributedString(string: "")
 		let discountedPriceFont = UIFont.systemFont(ofSize: 14, weight: .bold)
 		let orignalPriceFont = UIFont.systemFont(ofSize: 14, weight: .regular)
@@ -63,5 +51,4 @@ class RMProductPricingDetailsCell: UITableViewCell {
 		
 		return attrString
 	}
-
 }

@@ -2,7 +2,7 @@
 //  RMPrductDetailsImageHeaderView.swift
 //  RedMart
 //
-//  Created by Sumit Nathany on 10/08/18.
+//  Created by Sumit Nathany on 16/08/18.
 //  Copyright © 2018 Sumit Nathany. All rights reserved.
 //
 
@@ -82,6 +82,9 @@ internal final class RMPrductDetailsImageHeaderView: UIView, UIPageViewControlle
 		return self.slidesArrayInOrder.count
 	}
 
-	func presentationIndex(for pageViewController: UIPageViewController) -> Int { return 0 }
+	func presentationIndex(for pageViewController: UIPageViewController) -> Int
+	{
+		return 0
+	}
 }
 
